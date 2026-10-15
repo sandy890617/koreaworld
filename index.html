@@ -1,0 +1,484 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-title" content="韓文速查" />
+  <title>韓國旅行速查手冊</title>
+  <link rel="stylesheet" href="index.css" />
+</head>
+<body>
+
+  <!-- 頂部 5 格快速切換導覽 -->
+  <header>
+    <div class="nav-grid">
+      <a href="#dining" class="nav-btn">🍽️ 點餐</a>
+      <a href="#cvs" class="nav-btn">🏪 超商</a>
+      <a href="#shopping" class="nav-btn">🛍️ 購物</a>
+      <a href="#traffic" class="nav-btn">🚖 交通</a>
+      <a href="#emergency" class="nav-btn">🆘 求助</a>
+    </div>
+  </header>
+
+  <main class="container">
+
+    <!-- 🍽️ 餐廳與咖啡廳 -->
+    <section id="dining" class="section-title">🍽️ 餐廳點餐與常用數字</section>
+
+    <!-- 👥 用餐人數（1~7位） -->
+    <div class="counter-card">
+      <div class="counter-label">👥 人數（幾位？）</div>
+      <div class="counter-grid">
+        <button class="count-btn" onclick="speak('한 명이요.')">
+          <span class="count-num">1位</span>
+          <span class="count-kr">한 명</span>
+        </button>
+        <button class="count-btn" onclick="speak('두 명이요.')">
+          <span class="count-num">2位</span>
+          <span class="count-kr">두 명</span>
+        </button>
+        <button class="count-btn" onclick="speak('세 명이요.')">
+          <span class="count-num">3位</span>
+          <span class="count-kr">세 명</span>
+        </button>
+        <button class="count-btn" onclick="speak('네 명이요.')">
+          <span class="count-num">4位</span>
+          <span class="count-kr">네 명</span>
+        </button>
+        <button class="count-btn" onclick="speak('다섯 명이요.')">
+          <span class="count-num">5位</span>
+          <span class="count-kr">다섯 명</span>
+        </button>
+        <button class="count-btn" onclick="speak('여섯 명이요.')">
+          <span class="count-num">6位</span>
+          <span class="count-kr">여섯 명</span>
+        </button>
+        <button class="count-btn" onclick="speak('일곱 명이요.')">
+          <span class="count-num">7位</span>
+          <span class="count-kr">일곱 명</span>
+        </button>
+      </div>
+    </div>
+
+    <!-- 🥘 點餐份數（1~7人份） -->
+    <div class="counter-card">
+      <div class="counter-label">🥘 份數（幾人份？）</div>
+      <div class="counter-grid">
+        <button class="count-btn" onclick="speak('일인분 주세요.')">
+          <span class="count-num">1份</span>
+          <span class="count-kr">1인분</span>
+        </button>
+        <button class="count-btn" onclick="speak('이인분 주세요.')">
+          <span class="count-num">2份</span>
+          <span class="count-kr">2인분</span>
+        </button>
+        <button class="count-btn" onclick="speak('삼인분 주세요.')">
+          <span class="count-num">3份</span>
+          <span class="count-kr">3인분</span>
+        </button>
+        <button class="count-btn" onclick="speak('사인분 주세요.')">
+          <span class="count-num">4份</span>
+          <span class="count-kr">4인분</span>
+        </button>
+        <button class="count-btn" onclick="speak('오인분 주세요.')">
+          <span class="count-num">5份</span>
+          <span class="count-kr">5인분</span>
+        </button>
+        <button class="count-btn" onclick="speak('육인분 주세요.')">
+          <span class="count-num">6份</span>
+          <span class="count-kr">6인분</span>
+        </button>
+        <button class="count-btn" onclick="speak('칠인분 주세요.')">
+          <span class="count-num">7份</span>
+          <span class="count-kr">7인분</span>
+        </button>
+      </div>
+    </div>
+
+    <!-- 🥤 數量（1~7個） -->
+    <div class="counter-card">
+      <div class="counter-label">🥤 數量（幾個？）</div>
+      <div class="counter-grid">
+        <button class="count-btn" onclick="speak('한 개 주세요.')">
+          <span class="count-num">1個</span>
+          <span class="count-kr">한 개</span>
+        </button>
+        <button class="count-btn" onclick="speak('두 개 주세요.')">
+          <span class="count-num">2個</span>
+          <span class="count-kr">두 개</span>
+        </button>
+        <button class="count-btn" onclick="speak('세 개 주세요.')">
+          <span class="count-num">3個</span>
+          <span class="count-kr">세 개</span>
+        </button>
+        <button class="count-btn" onclick="speak('네 개 주세요.')">
+          <span class="count-num">4個</span>
+          <span class="count-kr">네 개</span>
+        </button>
+        <button class="count-btn" onclick="speak('다섯 개 주세요.')">
+          <span class="count-num">5個</span>
+          <span class="count-kr">다섯 개</span>
+        </button>
+        <button class="count-btn" onclick="speak('여섯 개 주세요.')">
+          <span class="count-num">6個</span>
+          <span class="count-kr">여섯 개</span>
+        </button>
+        <button class="count-btn" onclick="speak('일곱 개 주세요.')">
+          <span class="count-num">7個</span>
+          <span class="count-kr">일곱 개</span>
+        </button>
+      </div>
+    </div>
+
+    <!-- 經典點餐句 -->
+    <div class="phrase-row" onclick="speak('이거 주세요.')">
+      <div class="phrase-content">
+        <div class="phrase-top">
+          <span class="korean-text">이거 주세요.</span>
+          <span class="zh-text">請給我這個（手指菜單）</span>
+        </div>
+        <div class="pronounce-sub">I-geo ju-se-yo ｜ 移勾 促誰唷</div>
+      </div>
+      <button class="sound-btn" aria-label="發音">🔊</button>
+    </div>
+
+    <!-- 內用 / 外帶 左右並排 -->
+    <div class="phrase-split">
+      <div class="phrase-row" onclick="speak('먹고 갈게요')">
+        <div class="phrase-content">
+          <div class="korean-text">먹고 갈게요</div>
+          <div class="zh-text">內用</div>
+        </div>
+        <button class="sound-btn">🔊</button>
+      </div>
+      <div class="phrase-row" onclick="speak('포장해 주세요')">
+        <div class="phrase-content">
+          <div class="korean-text">포장해 주세요</div>
+          <div class="zh-text">外帶</div>
+        </div>
+        <button class="sound-btn">🔊</button>
+      </div>
+    </div>
+
+    <!-- 咖啡冷熱 左右並排 -->
+    <div class="phrase-split">
+      <div class="phrase-row" onclick="speak('아이스로 주세요.')">
+        <div class="phrase-content">
+          <div class="korean-text">아이스 (ICE)</div>
+          <div class="zh-text">冰的</div>
+        </div>
+        <button class="sound-btn">🔊</button>
+      </div>
+      <div class="phrase-row" onclick="speak('따뜻한 거요.')">
+        <div class="phrase-content">
+          <div class="korean-text">따뜻한 거요</div>
+          <div class="zh-text">熱的</div>
+        </div>
+        <button class="sound-btn">🔊</button>
+      </div>
+    </div>
+
+    <!-- 加點與服務常用句 -->
+    <div class="phrase-row" onclick="speak('이거 하나 더 주세요.')">
+      <div class="phrase-content">
+        <div class="phrase-top">
+          <span class="korean-text">이거 하나 더 주세요.</span>
+          <span class="zh-text">這個請再給我一個（加點）</span>
+        </div>
+        <div class="pronounce-sub">I-geo ha-na deo ju-se-yo</div>
+      </div>
+      <button class="sound-btn">🔊</button>
+    </div>
+
+    <div class="phrase-row" onclick="speak('물 좀 주세요.')">
+      <div class="phrase-content">
+        <div class="phrase-top">
+          <span class="korean-text">물 주세요.</span>
+          <span class="zh-text">請給我水</span>
+        </div>
+        <div class="pronounce-sub">Mul ju-se-yo</div>
+      </div>
+      <button class="sound-btn">🔊</button>
+    </div>
+
+    <div class="phrase-row" onclick="speak('반찬 더 주세요.')">
+      <div class="phrase-content">
+        <div class="phrase-top">
+          <span class="korean-text">반찬 더 주세요.</span>
+          <span class="zh-text">請續小菜</span>
+        </div>
+        <div class="pronounce-sub">Ban-chan deo ju-se-yo</div>
+      </div>
+      <button class="sound-btn">🔊</button>
+    </div>
+
+    <div class="phrase-row" onclick="speak('앞접시 좀 주세요.')">
+      <div class="phrase-content">
+        <div class="phrase-top">
+          <span class="korean-text">앞접시 주세요.</span>
+          <span class="zh-text">請給我分食小碟子</span>
+        </div>
+        <div class="pronounce-sub">Ap-jeop-si ju-se-yo</div>
+      </div>
+      <button class="sound-btn">🔊</button>
+    </div>
+
+    <div class="phrase-row" onclick="speak('물티슈 좀 주세요.')">
+      <div class="phrase-content">
+        <div class="phrase-top">
+          <span class="korean-text">물티슈 주세요.</span>
+          <span class="zh-text">請給我濕紙巾</span>
+        </div>
+        <div class="pronounce-sub">Mul-ti-syu ju-se-yo</div>
+      </div>
+      <button class="sound-btn">🔊</button>
+    </div>
+
+    <!-- 結帳專區 左右並排 -->
+    <div class="phrase-split">
+      <div class="phrase-row" onclick="speak('계산해 주세요.')">
+        <div class="phrase-content">
+          <div class="korean-text">계산해 주세요</div>
+          <div class="zh-text">請結帳</div>
+        </div>
+        <button class="sound-btn">🔊</button>
+      </div>
+      <div class="phrase-row" onclick="speak('따로따로 계산해 주세요.')">
+        <div class="phrase-content">
+          <div class="korean-text">따로따로 계산</div>
+          <div class="zh-text">分開結帳</div>
+        </div>
+        <button class="sound-btn">🔊</button>
+      </div>
+    </div>
+
+    <!-- 🏪 超商專區（GS25 / CU / 7-11） -->
+    <section id="cvs" class="section-title">🏪 便利商店常用對話</section>
+
+    <!-- 買袋子 / 不用袋子 左右並排 -->
+    <div class="phrase-split">
+      <div class="phrase-row" onclick="speak('봉투 주세요.')">
+        <div class="phrase-content">
+          <div class="korean-text">봉투 주세요</div>
+          <div class="zh-text">請給我塑膠袋</div>
+        </div>
+        <button class="sound-btn">🔊</button>
+      </div>
+      <div class="phrase-row" onclick="speak('봉투는 괜찮아요.')">
+        <div class="phrase-content">
+          <div class="korean-text">봉투 괜찮아요</div>
+          <div class="zh-text">不用塑膠袋</div>
+        </div>
+        <button class="sound-btn">🔊</button>
+      </div>
+    </div>
+
+    <div class="phrase-row" onclick="speak('데워 주세요.')">
+      <div class="phrase-content">
+        <div class="phrase-top">
+          <span class="korean-text">데워 주세요.</span>
+          <span class="zh-text">請幫我微波加熱</span>
+        </div>
+        <div class="pronounce-sub">De-wo ju-se-yo</div>
+      </div>
+      <button class="sound-btn">🔊</button>
+    </div>
+
+    <!-- 筷子 / 吸管 左右並排 -->
+    <div class="phrase-split">
+      <div class="phrase-row" onclick="speak('젓가락 주세요.')">
+        <div class="phrase-content">
+          <div class="korean-text">젓가락 주세요</div>
+          <div class="zh-text">請給我免洗筷</div>
+        </div>
+        <button class="sound-btn">🔊</button>
+      </div>
+      <div class="phrase-row" onclick="speak('빨대 주세요.')">
+        <div class="phrase-content">
+          <div class="korean-text">빨대 주세요</div>
+          <div class="zh-text">請給我吸管</div>
+        </div>
+        <button class="sound-btn">🔊</button>
+      </div>
+    </div>
+
+    <div class="phrase-row" onclick="speak('이거 원 플러스 원이에요?')">
+      <div class="phrase-content">
+        <div class="phrase-top">
+          <span class="korean-text">원 플러스 원이에요?</span>
+          <span class="zh-text">請問這個是買一送一（1+1）嗎？</span>
+        </div>
+        <div class="pronounce-sub">Won peul-leo-seu won-i-e-yo?</div>
+      </div>
+      <button class="sound-btn">🔊</button>
+    </div>
+
+    <div class="phrase-row" onclick="speak('영수증 버려주세요.')">
+      <div class="phrase-content">
+        <div class="phrase-top">
+          <span class="korean-text">영수증 버려주세요.</span>
+          <span class="zh-text">發票直接幫我丟掉就好</span>
+        </div>
+        <div class="pronounce-sub">Yeong-su-jeung beo-ryeo-ju-se-yo</div>
+      </div>
+      <button class="sound-btn">🔊</button>
+    </div>
+
+    <!-- 🛍️ 購物與彩妝 -->
+    <section id="shopping" class="section-title">🛍️ 購物與藥妝（Olive Young必備）</section>
+
+    <div class="phrase-row" onclick="speak('택스 리펀 돼요?')">
+      <div class="phrase-content">
+        <div class="phrase-top">
+          <span class="korean-text">택스 리펀 돼요?</span>
+          <span class="zh-text">可以退稅嗎？</span>
+        </div>
+        <div class="pronounce-sub">Taek-seu ri-peon dwae-yo? ｜ 泰克絲哩朋 對唷？</div>
+      </div>
+      <button class="sound-btn">🔊</button>
+    </div>
+
+    <div class="phrase-row" onclick="speak('새거 있어요?')">
+      <div class="phrase-content">
+        <div class="phrase-top">
+          <span class="korean-text">새거 있어요?</span>
+          <span class="zh-text">有新的嗎？</span>
+        </div>
+        <div class="pronounce-sub">Sae-geo is-seo-yo? ｜ 誰勾 依搜唷？</div>
+      </div>
+      <button class="sound-btn">🔊</button>
+    </div>
+
+    <!-- 試穿 / 試用 左右並排 -->
+    <div class="phrase-split">
+      <div class="phrase-row" onclick="speak('입어봐도 돼요?')">
+        <div class="phrase-content">
+          <div class="korean-text">입어봐도 돼요?</div>
+          <div class="zh-text">可試穿嗎？</div>
+        </div>
+        <button class="sound-btn">🔊</button>
+      </div>
+      <div class="phrase-row" onclick="speak('테스트해 봐도 돼요?')">
+        <div class="phrase-content">
+          <div class="korean-text">테스트 돼요?</div>
+          <div class="zh-text">可試色/試用嗎？</div>
+        </div>
+        <button class="sound-btn">🔊</button>
+      </div>
+    </div>
+
+    <div class="phrase-row" onclick="speak('다른 색상 있어요?')">
+      <div class="phrase-content">
+        <div class="phrase-top">
+          <span class="korean-text">다른 색상 있어요?</span>
+          <span class="zh-text">有別的顏色嗎？</span>
+        </div>
+        <div class="pronounce-sub">Da-reun saek-sang it-seo-yo?</div>
+      </div>
+      <button class="sound-btn">🔊</button>
+    </div>
+
+    <div class="phrase-row" onclick="speak('봉투는 괜찮아요.')">
+      <div class="phrase-content">
+        <div class="phrase-top">
+          <span class="korean-text">봉투는 괜찮아요.</span>
+          <span class="zh-text">不用塑膠袋，謝謝</span>
+        </div>
+        <div class="pronounce-sub">Bong-tu-neun gwaen-chan-a-yo</div>
+      </div>
+      <button class="sound-btn">🔊</button>
+    </div>
+
+    <!-- 🚖 交通與計程車 -->
+    <section id="traffic" class="section-title">🚖 交通與計程車</section>
+
+    <div class="phrase-row" onclick="speak('여기 주소로 가주세요.')">
+      <div class="phrase-content">
+        <div class="phrase-top">
+          <span class="korean-text">여기 주소로 가주세요.</span>
+          <span class="zh-text">請載我到這個地址（秀手機）</span>
+        </div>
+        <div class="pronounce-sub">Yeo-gi ju-so-ro ga-ju-se-yo</div>
+      </div>
+      <button class="sound-btn">🔊</button>
+    </div>
+
+    <div class="phrase-row" onclick="speak('트렁크 좀 열어주세요.')">
+      <div class="phrase-content">
+        <div class="phrase-top">
+          <span class="korean-text">트렁크 좀 열어주세요.</span>
+          <span class="zh-text">請開後車廂放行李</span>
+        </div>
+        <div class="pronounce-sub">Teu-reong-keu jom yeol-eo-ju-se-yo</div>
+      </div>
+      <button class="sound-btn">🔊</button>
+    </div>
+
+    <div class="phrase-row" onclick="speak('여기서 내려주세요.')">
+      <div class="phrase-content">
+        <div class="phrase-top">
+          <span class="korean-text">여기서 내려주세요.</span>
+          <span class="zh-text">請在這邊放我下車</span>
+        </div>
+        <div class="pronounce-sub">Yeo-gi-seo nae-ryeo-ju-se-yo ｜ 唷gi搜 內溜促誰唷</div>
+      </div>
+      <button class="sound-btn">🔊</button>
+    </div>
+
+    <div class="phrase-row" onclick="speak('화장실이 어디예요?')">
+      <div class="phrase-content">
+        <div class="phrase-top">
+          <span class="korean-text">화장실이 어디예요?</span>
+          <span class="zh-text">請問洗手間在哪？</span>
+        </div>
+        <div class="pronounce-sub">Hwa-jang-sil-i eo-di-ye-yo?</div>
+      </div>
+      <button class="sound-btn">🔊</button>
+    </div>
+
+    <!-- 🆘 求助與萬用語 -->
+    <section id="emergency" class="section-title">🆘 常用招呼與求助</section>
+
+    <!-- 招呼與萬用語 左右並排 -->
+    <div class="phrase-split">
+      <div class="phrase-row" onclick="speak('저기요!')">
+        <div class="phrase-content">
+          <div class="korean-text">저기요!</div>
+          <div class="zh-text">不好意思/叫店員</div>
+        </div>
+        <button class="sound-btn">🔊</button>
+      </div>
+      <div class="phrase-row" onclick="speak('감사합니다.')">
+        <div class="phrase-content">
+          <div class="korean-text">감사합니다.</div>
+          <div class="zh-text">謝謝您</div>
+        </div>
+        <button class="sound-btn">🔊</button>
+      </div>
+    </div>
+
+    <div class="phrase-split">
+      <div class="phrase-row" onclick="speak('괜찮아요.')">
+        <div class="phrase-content">
+          <div class="korean-text">괜찮아요.</div>
+          <div class="zh-text">沒關係/不用了</div>
+        </div>
+        <button class="sound-btn">🔊</button>
+      </div>
+      <div class="phrase-row" onclick="speak('도와주세요.')">
+        <div class="phrase-content">
+          <div class="korean-text">도와주세요.</div>
+          <div class="zh-text">請幫幫我</div>
+        </div>
+        <button class="sound-btn">🔊</button>
+      </div>
+    </div>
+
+  </main>
+
+  <div id="toast">提示訊息</div>
+
+  <script src="index.js"></script>
+</body>
+</html>
